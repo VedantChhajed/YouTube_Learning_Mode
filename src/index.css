@@ -21,3 +21,23 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-600;
 }
+
+/* Custom animation for the Learning Mode button */
+@keyframes highlight-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(62, 166, 255, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(62, 166, 255, 0.8);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(62, 166, 255, 0.4);
+    transform: scale(1);
+  }
+}
+
+.learning-btn-highlight {
+  animation: highlight-pulse 2s ease-in-out infinite;
+}

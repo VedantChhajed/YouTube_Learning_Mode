@@ -51,11 +51,13 @@ const Recommendations: React.FC = () => {
 
 	return (
 		<div>
-			<h3 className="text-lg font-medium mb-3">Recommended videos</h3>
+			<h3 className="text-base font-medium mb-3 text-text-primary">
+				Recommended videos
+			</h3>
 			<div className="space-y-3">
 				{videoThumbnails.map((video) => (
 					<div key={video.id} className="flex cursor-pointer group">
-						<div className="w-40 h-24 bg-secondary rounded-lg overflow-hidden flex-shrink-0">
+						<div className="w-40 h-[90px] bg-secondary rounded-sm overflow-hidden flex-shrink-0">
 							<img
 								src={video.thumbnail}
 								alt={video.title}
@@ -63,16 +65,19 @@ const Recommendations: React.FC = () => {
 							/>
 						</div>
 						<div className="ml-2 flex-grow">
-							<h4 className="text-sm font-medium line-clamp-2 group-hover:text-primary">
+							<h4 className="text-sm font-medium line-clamp-2 group-hover:text-primary mb-1">
 								{video.title}
 							</h4>
-							<p className="text-xs text-text-secondary mt-1">
+							<p className="text-xs text-text-secondary">
 								{video.channel}
 							</p>
-							<div className="flex text-xs text-text-secondary mt-1">
+							<div className="flex text-xs text-text-secondary">
 								<span>{video.views}</span>
 								<span className="mx-1">•</span>
 								<span>{video.time}</span>
+							</div>
+							<div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 rounded">
+								4:15
 							</div>
 						</div>
 					</div>

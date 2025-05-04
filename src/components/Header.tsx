@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Search, Bell, User, Mic, ArrowLeft } from 'lucide-react';
+import { Menu, Search, Bell, User, Mic, ArrowLeft, BookOpen } from 'lucide-react';
 import { useLearningMode } from '../contexts/LearningModeContext';
 import YouTubeLogo from './YouTubeLogo';
 
@@ -13,7 +13,10 @@ const Header: React.FC = () => {
           <button className="p-2 mr-2 rounded-full hover:bg-surface">
             <ArrowLeft size={20} />
           </button>
-          <div className="flex-grow text-sm font-medium">Learning Mode</div>
+          <div className="flex items-center text-primary font-bold">
+            <BookOpen size={18} className="mr-2" />
+            Learning Mode Active
+          </div>
         </div>
       </header>
     );
